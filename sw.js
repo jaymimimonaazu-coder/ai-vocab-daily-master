@@ -1,8 +1,9 @@
-const CACHE_NAME = "ai-vocab-daily-master-v1";
+const CACHE_NAME = "ai-vocab-daily-master-v2";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./manifest.json",
+  "./data/terms.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
 ];

@@ -1,0 +1,212 @@
+[
+  {
+    "id": "api",
+    "term": "API",
+    "reading": "Application Programming Interface",
+    "description": "異なるソフトウェア同士が情報をやり取りするための「窓口」となる仕組み。中身を知らなくても、決められた形式で呼び出せば結果が返ってくる。",
+    "example": "天気アプリが気象庁のデータをAPI経由で取得して画面に表示する。"
+  },
+  {
+    "id": "machine-learning",
+    "term": "機械学習",
+    "reading": "Machine Learning",
+    "description": "データからパターンを学習し、明示的なルールを書かなくても予測や判断ができるようにする技術。",
+    "example": "動画配信サービスの「あなたへのおすすめ」や、迷惑メールの自動振り分け。"
+  },
+  {
+    "id": "cloud-computing",
+    "term": "クラウドコンピューティング",
+    "reading": "Cloud Computing",
+    "description": "インターネット経由でサーバーやストレージなどの計算資源を、必要な分だけ借りて使う仕組み。",
+    "example": "スマホの写真を端末ではなくクラウドに保存し、どの端末からでも見られるようにする。"
+  },
+  {
+    "id": "neural-network",
+    "term": "ニューラルネットワーク",
+    "reading": "Neural Network",
+    "description": "人間の脳の神経細胞のつながりを模した計算モデル。入力を何層もの計算を通して変換し、答えを出す。",
+    "example": "手書き数字の画像を見て「これは7」と判定する仕組みの土台になっている。"
+  },
+  {
+    "id": "algorithm",
+    "term": "アルゴリズム",
+    "reading": "Algorithm",
+    "description": "問題を解くための手順を、誰がやっても同じ結果になるように明確に定めたもの。",
+    "example": "カーナビが最短ルートを計算する手順や、料理のレシピもアルゴリズムの一種。"
+  },
+  {
+    "id": "database",
+    "term": "データベース",
+    "reading": "Database",
+    "description": "大量のデータを整理して保存し、素早く検索・更新できるようにした仕組み。",
+    "example": "ネット通販の商品情報や注文履歴は、すべてデータベースに保存されている。"
+  },
+  {
+    "id": "deep-learning",
+    "term": "ディープラーニング",
+    "reading": "Deep Learning / 深層学習",
+    "description": "ニューラルネットワークの層を深く重ねることで、複雑な特徴を自動的に見つけ出す機械学習の手法。",
+    "example": "スマホの顔認証や、写真アプリが「犬」「海」などを自動でタグ付けする機能。"
+  },
+  {
+    "id": "generative-ai",
+    "term": "生成AI",
+    "reading": "Generative AI",
+    "description": "学習した内容をもとに、文章・画像・音声・コードなどの新しいコンテンツを作り出すAI。",
+    "example": "メールの下書きを作ってもらう、イラストのラフ案を出してもらうといった使い方。"
+  },
+  {
+    "id": "llm",
+    "term": "大規模言語モデル",
+    "reading": "LLM / Large Language Model",
+    "description": "膨大な量のテキストを学習し、文章の続きを予測する形で自然な言葉を扱えるようにしたAIモデル。",
+    "example": "ChatGPTやClaudeなどのチャットAIの中核として動いている。"
+  },
+  {
+    "id": "prompt",
+    "term": "プロンプト",
+    "reading": "Prompt",
+    "description": "AIに対して与える指示や質問の文章。書き方しだいで返ってくる答えの質が大きく変わる。",
+    "example": "「要約して」より「小学生にも分かるように3行で要約して」と書くほうが意図に近い答えが返る。"
+  },
+  {
+    "id": "training-data",
+    "term": "学習データ",
+    "reading": "Training Data",
+    "description": "AIがパターンを学ぶために与えられる元データ。データの偏りはそのままAIの偏りになる。",
+    "example": "晴れの日の写真だけで学習させると、雨の日の判定が苦手なAIができあがる。"
+  },
+  {
+    "id": "inference",
+    "term": "推論",
+    "reading": "Inference",
+    "description": "学習済みのAIモデルに実際のデータを入力して、答えを出させること。学習とは別の工程。",
+    "example": "翻訳アプリに文章を入れて訳文が返ってくる瞬間の処理が推論にあたる。"
+  },
+  {
+    "id": "nlp",
+    "term": "自然言語処理",
+    "reading": "NLP / Natural Language Processing",
+    "description": "人間が日常的に使う言葉をコンピュータに扱わせるための技術分野。",
+    "example": "音声アシスタントへの話しかけ、迷惑メール判定、文章の感情分析など。"
+  },
+  {
+    "id": "token",
+    "term": "トークン",
+    "reading": "Token",
+    "description": "AIが文章を処理するときの最小単位。単語よりも細かく区切られることが多く、料金や入力上限の基準になる。",
+    "example": "AIのAPI利用料は「1000トークンあたり◯円」という形で計算される。"
+  },
+  {
+    "id": "fine-tuning",
+    "term": "ファインチューニング",
+    "reading": "Fine-tuning",
+    "description": "学習済みモデルに追加のデータを学ばせて、特定の用途に合うよう調整すること。",
+    "example": "汎用のAIに自社の問い合わせ履歴を学ばせ、自社製品に詳しいサポートAIにする。"
+  },
+  {
+    "id": "supervised-learning",
+    "term": "教師あり学習",
+    "reading": "Supervised Learning",
+    "description": "入力と正解のペアを与えて学習させる方法。正解ラベルを人が用意する必要がある。",
+    "example": "「この写真は猫」というラベル付き画像を大量に見せて猫を判別できるようにする。"
+  },
+  {
+    "id": "unsupervised-learning",
+    "term": "教師なし学習",
+    "reading": "Unsupervised Learning",
+    "description": "正解を与えず、データの中の構造やグループを自力で見つけさせる学習方法。",
+    "example": "購買履歴から「似た買い方をする客層」を自動的にグループ分けする。"
+  },
+  {
+    "id": "reinforcement-learning",
+    "term": "強化学習",
+    "reading": "Reinforcement Learning",
+    "description": "試行錯誤を繰り返し、良い結果には報酬を与えることで、最適な行動を学ばせる方法。",
+    "example": "囲碁AIが自己対戦を何百万回も繰り返して強くなっていく過程。"
+  },
+  {
+    "id": "overfitting",
+    "term": "過学習",
+    "reading": "Overfitting",
+    "description": "学習データに合わせ込みすぎて、初めて見るデータではうまく働かなくなる状態。",
+    "example": "過去問を丸暗記したせいで、出題のされ方が変わると解けなくなる状態に近い。"
+  },
+  {
+    "id": "hallucination",
+    "term": "ハルシネーション",
+    "reading": "Hallucination",
+    "description": "AIが事実でない内容を、もっともらしい文章で出力してしまう現象。",
+    "example": "存在しない論文や書籍のタイトルを、実在するかのように答えてしまう。"
+  },
+  {
+    "id": "rag",
+    "term": "RAG",
+    "reading": "Retrieval-Augmented Generation / 検索拡張生成",
+    "description": "AIに答えさせる前に関連文書を検索し、その内容を根拠として渡す仕組み。事実に基づかない回答を減らせる。",
+    "example": "社内マニュアルを検索してから回答させることで、自社ルールに沿った答えを返すサポートAI。"
+  },
+  {
+    "id": "embedding",
+    "term": "埋め込み",
+    "reading": "Embedding",
+    "description": "文章や画像の意味を数値のベクトルに変換したもの。意味が近いものは数値の距離も近くなる。",
+    "example": "「犬」と「子犬」が近い位置に並び、言い回しが違っても似た文書を探せるようになる。"
+  },
+  {
+    "id": "computer-vision",
+    "term": "コンピュータビジョン",
+    "reading": "Computer Vision",
+    "description": "画像や映像から、写っているものや状況をコンピュータに理解させる技術分野。",
+    "example": "レジの無人化や、工場の製品キズ検査、自動運転の周囲認識。"
+  },
+  {
+    "id": "edge-computing",
+    "term": "エッジコンピューティング",
+    "reading": "Edge Computing",
+    "description": "クラウドに送らず、データが生まれた機器の近くで処理する方式。応答が速くプライバシー面でも有利。",
+    "example": "スマホの中だけで顔認証を完結させ、顔データを外部に送らない仕組み。"
+  },
+  {
+    "id": "iot",
+    "term": "IoT",
+    "reading": "Internet of Things / モノのインターネット",
+    "description": "家電やセンサーなど、あらゆるモノをネットにつないで情報をやり取りさせる考え方。",
+    "example": "外出先からスマホでエアコンを操作したり、電気使用量を確認したりする。"
+  },
+  {
+    "id": "cache",
+    "term": "キャッシュ",
+    "reading": "Cache",
+    "description": "一度取得したデータを手元に保存しておき、次回は素早く取り出せるようにする仕組み。",
+    "example": "一度見たWebページが2回目は速く表示されるのは、ブラウザのキャッシュが効いているため。"
+  },
+  {
+    "id": "version-control",
+    "term": "バージョン管理",
+    "reading": "Version Control / Git",
+    "description": "ファイルの変更履歴を記録し、いつでも過去の状態に戻したり変更点を比較したりできる仕組み。",
+    "example": "複数人で同じコードを編集しても、誰がどこを変えたかを追跡して統合できる。"
+  },
+  {
+    "id": "open-source",
+    "term": "オープンソース",
+    "reading": "Open Source",
+    "description": "ソースコードが公開され、誰でも閲覧・改変・再配布できるソフトウェアのあり方。",
+    "example": "ブラウザのFirefoxやOSのLinuxは、世界中の開発者の協力で作られている。"
+  },
+  {
+    "id": "encryption",
+    "term": "暗号化",
+    "reading": "Encryption",
+    "description": "データを第三者に読めない形へ変換し、鍵を持つ相手だけが元に戻せるようにする技術。",
+    "example": "URLが「https」で始まるサイトでは、通信内容が暗号化されて送受信される。"
+  },
+  {
+    "id": "two-factor-auth",
+    "term": "二要素認証",
+    "reading": "2FA / Two-Factor Authentication",
+    "description": "パスワードに加えて、もう一つ別の要素で本人確認を行う仕組み。パスワード漏洩だけでは突破されにくくなる。",
+    "example": "ログイン時にスマホアプリの6桁コードやSMSの確認コードを追加で入力する。"
+  }
+]

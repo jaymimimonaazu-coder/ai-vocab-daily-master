@@ -94,79 +94,13 @@
 
         <p class="px-1 text-xs text-slate-400">今日の3単語（<span id="learnedCount">0</span>/3 覚えた）</p>
 
-        <div class="space-y-3" id="term-card-list">
+        <div class="space-y-3" id="term-card-list"></div>
 
-          <!-- 用語カード 1 -->
-          <article class="term-card rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60" data-card-id="1">
-            <div class="flex items-start justify-between gap-3">
-              <div class="min-w-0">
-                <span class="inline-block rounded-full bg-indigo-50 px-2 py-0.5 text-[10px] font-bold text-indigo-600">用語 1</span>
-                <h3 class="mt-1.5 truncate text-base font-bold text-slate-900">API</h3>
-              </div>
-              <button type="button" onclick="toggleLearned(this)"
-                class="learned-btn flex shrink-0 items-center gap-1 rounded-full border border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-500 transition active:scale-95">
-                <span class="check-icon">☐</span> 覚えた！
-              </button>
-            </div>
-            <dl class="mt-3 space-y-2 text-sm">
-              <div>
-                <dt class="text-[11px] font-bold text-slate-400">解説</dt>
-                <dd class="mt-0.5 leading-relaxed text-slate-600">異なるソフトウェア同士が情報をやり取りするための「窓口」となる仕組み。</dd>
-              </div>
-              <div>
-                <dt class="text-[11px] font-bold text-slate-400">日常生活・開発での例</dt>
-                <dd class="mt-0.5 leading-relaxed text-slate-600">天気アプリが気象庁のデータをAPI経由で取得して画面に表示する。</dd>
-              </div>
-            </dl>
-          </article>
-
-          <!-- 用語カード 2 -->
-          <article class="term-card rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60" data-card-id="2">
-            <div class="flex items-start justify-between gap-3">
-              <div class="min-w-0">
-                <span class="inline-block rounded-full bg-indigo-50 px-2 py-0.5 text-[10px] font-bold text-indigo-600">用語 2</span>
-                <h3 class="mt-1.5 truncate text-base font-bold text-slate-900">機械学習</h3>
-              </div>
-              <button type="button" onclick="toggleLearned(this)"
-                class="learned-btn flex shrink-0 items-center gap-1 rounded-full border border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-500 transition active:scale-95">
-                <span class="check-icon">☐</span> 覚えた！
-              </button>
-            </div>
-            <dl class="mt-3 space-y-2 text-sm">
-              <div>
-                <dt class="text-[11px] font-bold text-slate-400">解説</dt>
-                <dd class="mt-0.5 leading-relaxed text-slate-600">データからパターンを学習し、明示的なルールなしで予測や判断を行う技術。</dd>
-              </div>
-              <div>
-                <dt class="text-[11px] font-bold text-slate-400">日常生活・開発での例</dt>
-                <dd class="mt-0.5 leading-relaxed text-slate-600">動画配信サービスの「あなたへのおすすめ」表示や、迷惑メールの自動判定。</dd>
-              </div>
-            </dl>
-          </article>
-
-          <!-- 用語カード 3 -->
-          <article class="term-card rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60" data-card-id="3">
-            <div class="flex items-start justify-between gap-3">
-              <div class="min-w-0">
-                <span class="inline-block rounded-full bg-indigo-50 px-2 py-0.5 text-[10px] font-bold text-indigo-600">用語 3</span>
-                <h3 class="mt-1.5 truncate text-base font-bold text-slate-900">クラウドコンピューティング</h3>
-              </div>
-              <button type="button" onclick="toggleLearned(this)"
-                class="learned-btn flex shrink-0 items-center gap-1 rounded-full border border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-500 transition active:scale-95">
-                <span class="check-icon">☐</span> 覚えた！
-              </button>
-            </div>
-            <dl class="mt-3 space-y-2 text-sm">
-              <div>
-                <dt class="text-[11px] font-bold text-slate-400">解説</dt>
-                <dd class="mt-0.5 leading-relaxed text-slate-600">インターネット経由でサーバーやストレージなどを必要な分だけ利用できる仕組み。</dd>
-              </div>
-              <div>
-                <dt class="text-[11px] font-bold text-slate-400">日常生活・開発での例</dt>
-                <dd class="mt-0.5 leading-relaxed text-slate-600">スマホの写真をローカルでなくクラウドに保存し、どの端末からでも見られるようにする。</dd>
-              </div>
-            </dl>
-          </article>
+        <div id="term-empty-state" class="rounded-2xl border border-dashed border-slate-300 bg-white/60 px-4 py-10 text-center">
+          <p class="text-3xl">📖</p>
+          <p class="mt-2 text-sm font-semibold text-slate-500">今日の3単語はまだ表示していません</p>
+          <p class="mt-1 text-xs text-slate-400">上のボタンを押して今日の学習を始めましょう</p>
+        </div>
 
         </div>
       </div>
@@ -224,35 +158,8 @@
           class="w-full border-none bg-transparent text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-0">
       </div>
 
-      <div class="space-y-2">
-        <article class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3.5 shadow-sm">
-          <div>
-            <h3 class="text-sm font-bold text-slate-900">API</h3>
-            <p class="mt-0.5 line-clamp-1 text-xs text-slate-400">異なるソフトウェア同士が情報をやり取りする窓口</p>
-          </div>
-          <span class="shrink-0 rounded-full bg-emerald-50 px-2 py-1 text-[10px] font-bold text-emerald-600">習得済み</span>
-        </article>
-        <article class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3.5 shadow-sm">
-          <div>
-            <h3 class="text-sm font-bold text-slate-900">機械学習</h3>
-            <p class="mt-0.5 line-clamp-1 text-xs text-slate-400">データからパターンを学習し予測や判断を行う技術</p>
-          </div>
-          <span class="shrink-0 rounded-full bg-emerald-50 px-2 py-1 text-[10px] font-bold text-emerald-600">習得済み</span>
-        </article>
-        <article class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3.5 shadow-sm">
-          <div>
-            <h3 class="text-sm font-bold text-slate-900">クラウドコンピューティング</h3>
-            <p class="mt-0.5 line-clamp-1 text-xs text-slate-400">ネット経由で計算資源を必要な分だけ使う仕組み</p>
-          </div>
-          <span class="shrink-0 rounded-full bg-slate-100 px-2 py-1 text-[10px] font-bold text-slate-400">学習中</span>
-        </article>
-        <article class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3.5 shadow-sm">
-          <div>
-            <h3 class="text-sm font-bold text-slate-900">ニューラルネットワーク</h3>
-            <p class="mt-0.5 line-clamp-1 text-xs text-slate-400">脳の神経細胞のつながりを模したAIの基本構造</p>
-          </div>
-          <span class="shrink-0 rounded-full bg-slate-100 px-2 py-1 text-[10px] font-bold text-slate-400">未学習</span>
-        </article>
+      <p class="mb-2 px-1 text-xs text-slate-400">全<span id="glossaryTotal">0</span>語中 <span id="glossaryLearned">0</span>語を習得</p>
+      <div class="space-y-2" id="glossary-list"></div>
       </div>
     </section>
 
@@ -310,8 +217,45 @@
 </div>
 
 <script>
-  /* ---------- 日付表示 & 平日/週末の初期判定 ---------- */
+  /* ---------- 設定と状態 ---------- */
+  const STORAGE_KEY = 'ai-vocab-daily-master:v1';
+  const DAILY_COUNT = 3;
+  const ROTATION_EPOCH = Date.UTC(2026, 0, 1);
   const DAY_LABELS = ['日', '月', '火', '水', '木', '金', '土'];
+
+  let terms = [];
+  let todayTerms = [];
+
+  // プライベートモードなど localStorage が使えない環境では、その場限りの状態で動かす
+  function loadState() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) return Object.assign({ learned: {}, fetchedDate: null }, JSON.parse(raw));
+    } catch (e) { /* 読めなければ初期状態 */ }
+    return { learned: {}, fetchedDate: null };
+  }
+
+  function saveState() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch (e) { /* 保存できなくても操作は続行できる */ }
+  }
+
+  const state = loadState();
+
+  /* ---------- 日付ユーティリティ ---------- */
+  function dateKey(date) {
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${date.getFullYear()}-${month}-${day}`;
+  }
+
+  function dayNumber(date) {
+    const midnight = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
+    return Math.floor((midnight - ROTATION_EPOCH) / 86400000);
+  }
+
+  /* ---------- 日付表示 & 平日/週末の初期判定 ---------- */
 
   function renderToday() {
     const now = new Date();
@@ -357,30 +301,144 @@
     });
   }
 
-  /* ---------- 平日: 今日の3単語を取得（表示確認用のダミー動作） ---------- */
-  function fetchTodayWords() {
-    document.querySelectorAll('.term-card').forEach((card, i) => {
-      card.classList.remove('view-fade');
-      void card.offsetWidth;
-      card.style.animationDelay = `${i * 80}ms`;
-      card.classList.add('view-fade');
-    });
+  /* ---------- 用語データの読み込み ---------- */
+  async function loadTerms() {
+    const res = await fetch('data/terms.json');
+    if (!res.ok) throw new Error(`terms.json: ${res.status}`);
+    terms = await res.json();
   }
 
-  /* ---------- 平日: 覚えた！ボタン ---------- */
-  function toggleLearned(btn) {
-    const learned = btn.classList.toggle('bg-emerald-500');
+  function showDataError() {
+    const empty = document.getElementById('term-empty-state');
+    empty.classList.remove('hidden');
+    empty.innerHTML =
+      '<p class="text-3xl">⚠️</p>' +
+      '<p class="mt-2 text-sm font-semibold text-slate-500">用語データを読み込めませんでした</p>' +
+      '<p class="mt-1 text-xs text-slate-400">通信状態を確認して再読み込みしてください</p>';
+  }
+
+  /* ---------- 今日の3単語の選定（日付から決まるので一日中変わらない） ---------- */
+  function pickTermsFor(date) {
+    if (!terms.length) return [];
+    const offset = dayNumber(date) * DAILY_COUNT;
+    const start = ((offset % terms.length) + terms.length) % terms.length;
+    return Array.from({ length: DAILY_COUNT }, (_, i) => terms[(start + i) % terms.length]);
+  }
+
+  /* ---------- 平日: 今日の3単語 ---------- */
+  function fetchTodayWords() {
+    if (!terms.length) return;
+    state.fetchedDate = dateKey(new Date());
+    saveState();
+    renderTodayTerms(true);
+  }
+
+  function renderTodayTerms(animate) {
+    const list = document.getElementById('term-card-list');
+    const empty = document.getElementById('term-empty-state');
+    const fetched = state.fetchedDate === dateKey(new Date());
+
+    list.textContent = '';
+    empty.classList.toggle('hidden', fetched);
+    if (!fetched) {
+      updateLearnedCount();
+      return;
+    }
+
+    todayTerms = pickTermsFor(new Date());
+    todayTerms.forEach((term, i) => {
+      const card = buildTermCard(term, i);
+      if (animate) card.style.animationDelay = `${i * 80}ms`;
+      list.appendChild(card);
+    });
+    updateLearnedCount();
+  }
+
+  function buildTermCard(term, index) {
+    const card = document.createElement('article');
+    card.className = 'term-card view-fade rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60';
+    card.innerHTML =
+      '<div class="flex items-start justify-between gap-3">' +
+        '<div class="min-w-0">' +
+          `<span class="inline-block rounded-full bg-indigo-50 px-2 py-0.5 text-[10px] font-bold text-indigo-600">用語 ${index + 1}</span>` +
+          '<h3 class="mt-1.5 text-base font-bold leading-snug text-slate-900" data-field="term"></h3>' +
+          '<p class="text-[11px] text-slate-400" data-field="reading"></p>' +
+        '</div>' +
+        '<button type="button" class="learned-btn flex shrink-0 items-center gap-1 rounded-full border px-3 py-1.5 text-xs font-semibold transition active:scale-95">' +
+          '<span class="check-icon">☐</span> 覚えた！' +
+        '</button>' +
+      '</div>' +
+      '<dl class="mt-3 space-y-2 text-sm">' +
+        '<div><dt class="text-[11px] font-bold text-slate-400">解説</dt>' +
+        '<dd class="mt-0.5 leading-relaxed text-slate-600" data-field="description"></dd></div>' +
+        '<div><dt class="text-[11px] font-bold text-slate-400">日常生活・開発での例</dt>' +
+        '<dd class="mt-0.5 leading-relaxed text-slate-600" data-field="example"></dd></div>' +
+      '</dl>';
+
+    card.querySelector('[data-field="term"]').textContent = term.term;
+    card.querySelector('[data-field="reading"]').textContent = term.reading || '';
+    card.querySelector('[data-field="description"]').textContent = term.description;
+    card.querySelector('[data-field="example"]').textContent = term.example;
+
+    const btn = card.querySelector('.learned-btn');
+    applyLearnedStyle(btn, isLearned(term.id));
+    btn.addEventListener('click', () => toggleLearned(term.id, btn));
+    return card;
+  }
+
+  /* ---------- 平日: 覚えた！ボタン（localStorageに保存） ---------- */
+  function isLearned(termId) {
+    return Boolean(state.learned[termId]);
+  }
+
+  function toggleLearned(termId, btn) {
+    const learned = !isLearned(termId);
+    if (learned) state.learned[termId] = dateKey(new Date());
+    else delete state.learned[termId];
+    saveState();
+
+    applyLearnedStyle(btn, learned);
+    updateLearnedCount();
+    renderGlossary();
+  }
+
+  function applyLearnedStyle(btn, learned) {
+    btn.classList.toggle('bg-emerald-500', learned);
     btn.classList.toggle('border-emerald-500', learned);
     btn.classList.toggle('text-white', learned);
     btn.classList.toggle('border-slate-300', !learned);
     btn.classList.toggle('text-slate-500', !learned);
     btn.querySelector('.check-icon').textContent = learned ? '☑' : '☐';
-    updateLearnedCount();
   }
 
   function updateLearnedCount() {
-    const total = document.querySelectorAll('.learned-btn.bg-emerald-500').length;
-    document.getElementById('learnedCount').textContent = total;
+    const count = todayTerms.filter((t) => isLearned(t.id)).length;
+    document.getElementById('learnedCount').textContent = count;
+  }
+
+  /* ---------- 用語集 ---------- */
+  function renderGlossary() {
+    const list = document.getElementById('glossary-list');
+    list.textContent = '';
+
+    terms.forEach((term) => {
+      const learned = isLearned(term.id);
+      const row = document.createElement('article');
+      row.className = 'flex items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3.5 shadow-sm';
+      row.innerHTML =
+        '<div class="min-w-0">' +
+          '<h3 class="text-sm font-bold text-slate-900" data-field="term"></h3>' +
+          '<p class="mt-0.5 truncate text-xs text-slate-400" data-field="description"></p>' +
+        '</div>' +
+        `<span class="shrink-0 rounded-full px-2 py-1 text-[10px] font-bold ${learned ? 'bg-emerald-50 text-emerald-600' : 'bg-slate-100 text-slate-400'}">${learned ? '習得済み' : '未学習'}</span>`;
+      row.querySelector('[data-field="term"]').textContent = term.term;
+      row.querySelector('[data-field="description"]').textContent = term.description;
+      list.appendChild(row);
+    });
+
+    document.getElementById('glossaryTotal').textContent = terms.length;
+    document.getElementById('glossaryLearned').textContent =
+      terms.filter((t) => isLearned(t.id)).length;
   }
 
   /* ---------- 週末: 一問一答クイズ ---------- */
@@ -423,6 +481,13 @@
   /* ---------- 初期化 ---------- */
   renderToday();
   renderQuiz();
+
+  loadTerms()
+    .then(() => {
+      renderTodayTerms(false);
+      renderGlossary();
+    })
+    .catch(showDataError);
 
   /* ---------- PWA: Service Worker登録 ---------- */
   if ('serviceWorker' in navigator) {
