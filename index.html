@@ -6,7 +6,12 @@
 <meta name="theme-color" content="#4f46e5">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="AI用語マスター">
+<meta name="mobile-web-app-capable" content="yes">
 <title>AI用語デイリーマスター</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   html, body { height: 100%; overscroll-behavior-y: contain; }
@@ -418,6 +423,15 @@
   /* ---------- 初期化 ---------- */
   renderToday();
   renderQuiz();
+
+  /* ---------- PWA: Service Worker登録 ---------- */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch((err) => {
+        console.error('Service worker registration failed:', err);
+      });
+    });
+  }
 </script>
 
 </body>
